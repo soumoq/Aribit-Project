@@ -84,22 +84,22 @@
         android:layout_height="70dp"
         android:layout_below="@+id/vibration_img"
         android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
+        android:layout_marginRight="29dp"
         android:layout_marginTop="30dp"
         app:cardCornerRadius="5dp"
         app:strokeColor="#148F77"
         app:strokeWidth="@dimen/cardview_compat_inset_shadow">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:paddingLeft="10dp">
+            android:layout_height="match_parent">
             <EditText
                 android:id="@+id/et_otp1"
                 android:layout_width="40dp"
+                android:layout_marginLeft="5dp"
                 android:layout_gravity="center"
                 android:layout_height="50dp"
+                android:layout_centerVertical="true"
                 android:cursorVisible="false"
                 android:digits="1234567890"
                 android:gravity="center"
@@ -112,6 +112,7 @@
             <EditText
                 android:id="@+id/et_otp2"
                 android:layout_width="40dp"
+                android:layout_marginLeft="10dp"
                 android:layout_centerVertical="true"
                 android:gravity="center"
                 android:layout_gravity="center"
@@ -128,6 +129,7 @@
             <EditText
                 android:id="@+id/et_otp3"
                 android:layout_width="40dp"
+                android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:layout_centerVertical="true"
@@ -144,6 +146,7 @@
             <EditText
                 android:id="@+id/et_otp4"
                 android:layout_width="40dp"
+                android:layout_marginLeft="10dp"
                 android:layout_centerVertical="true"
                 android:gravity="center"
                 android:layout_gravity="center"
@@ -161,6 +164,7 @@
                 android:id="@+id/et_otp5"
                 android:layout_width="40dp"
                 android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:layout_height="50dp"
@@ -177,11 +181,12 @@
                 android:id="@+id/et_otp6"
                 android:layout_width="40dp"
                 android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
                 android:layout_height="50dp"
                 android:gravity="center"
                 android:cursorVisible="false"
-                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@+id/et_otp5"
                 android:digits="1234567890"
                 android:inputType="number"
                 android:maxLength="4"
@@ -189,7 +194,7 @@
                 android:background="@drawable/edit_text_box"
                 android:textSize="20sp"/>
 
-        </LinearLayout>
+        </RelativeLayout>
 
     </com.google.android.material.card.MaterialCardView>
 
