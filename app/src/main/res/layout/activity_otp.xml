@@ -68,6 +68,7 @@
         android:layout_below="@+id/wright"/>
 
     <TextView
+        android:id="@+id/phone_no_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Please enter the verification\ncode sent to 0000000000"
@@ -91,12 +92,13 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp">
             <EditText
                 android:id="@+id/et_otp1"
                 android:layout_width="40dp"
                 android:layout_gravity="center"
-                android:layout_centerVertical="true"
                 android:layout_height="50dp"
                 android:cursorVisible="false"
                 android:digits="1234567890"
