@@ -10,6 +10,7 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.view.Window;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -35,6 +36,7 @@ public class OtpActivity extends AppCompatActivity {
     private TextView phoneNoTextView;
     private FirebaseAuth mAuth;
     private String verificationId;
+    private ImageView backArrow;
 
 
     @Override
@@ -48,6 +50,7 @@ public class OtpActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String phoneNo = intent.getStringExtra("phone");
 
+        backArrow = findViewById(R.id.back_arrow);
         otpText1 = findViewById(R.id.et_otp1);
         otpText2 = findViewById(R.id.et_otp2);
         otpText3 = findViewById(R.id.et_otp3);
@@ -64,8 +67,16 @@ public class OtpActivity extends AppCompatActivity {
         otpText6.addTextChangedListener(new GenericTextWatcher(otpText6));
         phoneNoTextView.setText("Please enter the verification\ncode sent to " + phoneNo);
 
-        //sendOtp("+91" + phoneNo);
-        startActivity(new Intent(this,HomeActivity.class));
+        backArrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(OtpActivity.this, SigningInActivity.class));
+                finish();
+            }
+        });
+
+        sendOtp("+91" + phoneNo);
+        //startActivity(new Intent(this,HomeActivity.class));
     }
 
 

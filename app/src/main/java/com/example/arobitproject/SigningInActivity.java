@@ -35,6 +35,7 @@ public class SigningInActivity extends AppCompatActivity {
                     Intent intent = new Intent(SigningInActivity.this, OtpActivity.class);
                     intent.putExtra("phone", phoneNo);
                     startActivity(intent);
+                    finish();
                 }else {
                     Toast.makeText(SigningInActivity.this,"Please enter correct phone number",Toast.LENGTH_LONG).show();
                 }
