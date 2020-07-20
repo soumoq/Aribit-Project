@@ -19,46 +19,46 @@
         android:id="@+id/line"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:src="@drawable/line"
         android:layout_below="@+id/app_name"
-        android:scaleType="fitXY"
         android:layout_marginLeft="50dp"
-        android:layout_marginTop="60dp"/>
+        android:layout_marginTop="60dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/line" />
 
     <TextView
         android:id="@+id/signin_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/line"
         android:layout_below="@+id/app_name"
-        android:layout_marginTop="52dp"
         android:layout_marginLeft="10dp"
-        android:textSize="25dp"
+        android:layout_marginTop="52dp"
+        android:layout_toRightOf="@+id/line"
+        android:text="Sign in to\nyour account"
         android:textColor="#148F77"
-        android:textStyle="bold"
-        android:text="Sign in to\nyour account"/>
+        android:textSize="25dp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/for_verification"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="for verification a passcode will\nbe send on the number"
         android:layout_below="@+id/signin_text"
+        android:layout_marginLeft="50dp"
         android:layout_marginTop="10dp"
-        android:layout_marginLeft="50dp"/>
+        android:text="for verification a passcode will\nbe send on the number" />
 
     <EditText
         android:id="@+id/phone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint=" Enter your Phone Number"
-        android:paddingLeft="35dp"
         android:layout_below="@+id/for_verification"
-        android:layout_marginTop="20dp"
         android:layout_marginLeft="48dp"
+        android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
-        android:inputType="number"
         android:drawableLeft="@drawable/india"
+        android:hint=" Enter your Phone Number"
+        android:inputType="number"
+        android:paddingLeft="35dp"
         android:scaleType="fitXY" />
 
     <TextView
@@ -66,24 +66,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/for_verification"
+        android:layout_marginLeft="48dp"
         android:layout_marginTop="32dp"
         android:text="+91"
         android:textColor="#000000"
-        android:textSize="17dp"
-        android:layout_marginLeft="48dp"/>
+        android:textSize="17dp" />
 
     <Button
         android:id="@+id/login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Agree &amp; Continue"
-        android:background="@drawable/agree_and_continue"
         android:layout_below="@+id/country_code"
-        android:layout_marginTop="80dp"
         android:layout_marginLeft="40dp"
-        android:textColor="#FFFFFF"
-        android:textSize="17dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/agree_and_continue"
+        android:text="Agree &amp; Continue"
         android:textAllCaps="false"
-        android:layout_marginRight="30dp"/>
+        android:textColor="#FFFFFF"
+        android:textSize="17dp" />
 
 </RelativeLayout>
