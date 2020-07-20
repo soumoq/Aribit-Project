@@ -64,8 +64,8 @@ public class OtpActivity extends AppCompatActivity {
         otpText6.addTextChangedListener(new GenericTextWatcher(otpText6));
         phoneNoTextView.setText("Please enter the verification\ncode sent to " + phoneNo);
 
-        sendOtp("+91" + phoneNo);
-        //startActivity(new Intent(this,HomeActivity.class));
+        //sendOtp("+91" + phoneNo);
+        startActivity(new Intent(this,HomeActivity.class));
     }
 
 

@@ -66,6 +66,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_toRightOf="@+id/call_image"
                 android:text="Call to a customer"
+                android:textColor="#41C651 "
                 android:textSize="12dp" />
 
             <TextView
@@ -88,6 +89,116 @@
                 android:layout_toLeftOf="@+id/date"
                 android:text="Ordered on: "
                 android:textSize="12dp" />
+
+            <View
+                android:id="@+id/line_up"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/call_image"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/order_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line_up"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="10dp"
+                android:text="Order ID"
+                android:textSize="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/order_id"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="5dp"
+                android:text="#OTB000145"
+                android:textColor="#000000" />
+
+            <View
+                android:id="@+id/v_line_1"
+                android:layout_width="1dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/line_up"
+                android:layout_marginLeft="45dp"
+                android:layout_toRightOf="@+id/order_id"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/order_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line_up"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/v_line_1"
+                android:text="Order amount:"
+                android:textSize="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/order_amount"
+                android:layout_marginLeft="27dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/v_line_1"
+                android:text="$262.35"
+                android:textColor="#000000" />
+
+            <View
+                android:id="@+id/v_line_2"
+                android:layout_width="1dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/line_up"
+                android:layout_marginLeft="110dp"
+                android:layout_toRightOf="@+id/v_line_1"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/line_up"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="27dp"
+                android:text="DETAILS"
+                android:textColor="#029688" />
+
+            <View
+                android:id="@+id/line_down"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/v_line_1"
+                android:background="@android:color/darker_gray" />
+
+            <ImageView
+                android:id="@+id/image_location"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/line_down"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/location" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line_down"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@+id/image_location"
+                android:text="66 Bajitpur Tarakeswar, Hooghly" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/message"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/line_down"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"/>
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 </RelativeLayout>
