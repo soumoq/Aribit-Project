@@ -1,114 +1,128 @@
 <merge xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="554px"
+        android:layout_marginLeft="49px"
+        android:layout_marginRight="49px"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="69px">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/one"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_marginLeft="50dp"
+            android:text="1"
+            android:textColor="#000000"
+            android:textSize="69px" />
 
-            <Button
-                android:id="@+id/button_1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="1"/>
-
-            <Button
-                android:id="@+id/button_2"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="2"/>
-
-            <Button
-                android:id="@+id/button_3"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="3"/>
-
-            <Button
-                android:id="@+id/button_4"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="4"/>
-
-            <Button
-                android:id="@+id/button_5"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="5"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/two"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_centerHorizontal="true"
+            android:text="2"
+            android:textColor="#000000"
+            android:textSize="69px" />
 
-            <Button
-                android:id="@+id/button_6"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="6"/>
-
-            <Button
-                android:id="@+id/button_7"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="7"/>
-
-            <Button
-                android:id="@+id/button_8"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="8"/>
-
-            <Button
-                android:id="@+id/button_9"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="9"/>
-
-            <Button
-                android:id="@+id/button_0"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="0"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/three"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="50dp"
+            android:text="3"
+            android:textColor="#000000"
+            android:textSize="69px" />
 
-            <Button
-                android:id="@+id/button_delete"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:text="Delete"/>
+        <TextView
+            android:id="@+id/four"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/one"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"
+            android:text="4"
+            android:textColor="#000000"
+            android:textSize="69px" />
 
-            <Button
-                android:id="@+id/button_enter"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
-                android:text="Enter"/>
+        <TextView
+            android:id="@+id/five"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/two"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="5"
+            android:textColor="#000000"
+            android:textSize="69px" />
 
-        </LinearLayout>
-    </LinearLayout>
+        <TextView
+            android:id="@+id/six"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/three"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="50dp"
+            android:text="6"
+            android:textColor="#000000"
+            android:textSize="69px" />
+        <TextView
+            android:id="@+id/seven"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/four"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"
+            android:text="7"
+            android:textColor="#000000"
+            android:textSize="69px" />
+
+        <TextView
+            android:id="@+id/eight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/four"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="8"
+            android:textColor="#000000"
+            android:textSize="69px" />
+
+        <TextView
+            android:id="@+id/nine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/four"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="50dp"
+            android:text="9"
+            android:textColor="#000000"
+            android:textSize="69px" />
+
+        <ImageView
+            android:id="@+id/button_delete"
+            android:layout_width="69px"
+            android:layout_height="50px"
+            android:src="@drawable/back_space"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/eight"/>
+
+        <TextView
+            android:id="@+id/zero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/eight"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="0"
+            android:textColor="#000000"
+            android:textSize="69px" />
+
+    </RelativeLayout>
 
 </merge>

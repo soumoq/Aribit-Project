@@ -8,7 +8,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.inputmethod.InputConnection;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 public class MyKeyboard extends LinearLayout implements View.OnClickListener {
 
@@ -27,18 +29,17 @@ public class MyKeyboard extends LinearLayout implements View.OnClickListener {
     }
 
     // keyboard keys (buttons)
-    private Button mButton1;
-    private Button mButton2;
-    private Button mButton3;
-    private Button mButton4;
-    private Button mButton5;
-    private Button mButton6;
-    private Button mButton7;
-    private Button mButton8;
-    private Button mButton9;
-    private Button mButton0;
-    private Button mButtonDelete;
-    private Button mButtonEnter;
+    private TextView mButton1;
+    private TextView mButton2;
+    private TextView mButton3;
+    private TextView mButton4;
+    private TextView mButton5;
+    private TextView mButton6;
+    private TextView mButton7;
+    private TextView mButton8;
+    private TextView mButton9;
+    private TextView mButton0;
+    private ImageView mButtonDelete;
 
     // This will map the button resource id to the String value that we want to
     // input when that button is clicked.
@@ -51,18 +52,17 @@ public class MyKeyboard extends LinearLayout implements View.OnClickListener {
 
         // initialize buttons
         LayoutInflater.from(context).inflate(R.layout.keyboard, this, true);
-        mButton1 = (Button) findViewById(R.id.button_1);
-        mButton2 = (Button) findViewById(R.id.button_2);
-        mButton3 = (Button) findViewById(R.id.button_3);
-        mButton4 = (Button) findViewById(R.id.button_4);
-        mButton5 = (Button) findViewById(R.id.button_5);
-        mButton6 = (Button) findViewById(R.id.button_6);
-        mButton7 = (Button) findViewById(R.id.button_7);
-        mButton8 = (Button) findViewById(R.id.button_8);
-        mButton9 = (Button) findViewById(R.id.button_9);
-        mButton0 = (Button) findViewById(R.id.button_0);
-        mButtonDelete = (Button) findViewById(R.id.button_delete);
-        mButtonEnter = (Button) findViewById(R.id.button_enter);
+        mButton1 = findViewById(R.id.one);
+        mButton2 = findViewById(R.id.two);
+        mButton3 = findViewById(R.id.three);
+        mButton4 = findViewById(R.id.four);
+        mButton5 = findViewById(R.id.five);
+        mButton6 = findViewById(R.id.six);
+        mButton7 = findViewById(R.id.seven);
+        mButton8 = findViewById(R.id.eight);
+        mButton9 = findViewById(R.id.nine);
+        mButton0 = findViewById(R.id.zero);
+        mButtonDelete = findViewById(R.id.button_delete);
 
         // set button click listeners
         mButton1.setOnClickListener(this);
@@ -76,20 +76,18 @@ public class MyKeyboard extends LinearLayout implements View.OnClickListener {
         mButton9.setOnClickListener(this);
         mButton0.setOnClickListener(this);
         mButtonDelete.setOnClickListener(this);
-        mButtonEnter.setOnClickListener(this);
 
         // map buttons IDs to input strings
-        keyValues.put(R.id.button_1, "1");
-        keyValues.put(R.id.button_2, "2");
-        keyValues.put(R.id.button_3, "3");
-        keyValues.put(R.id.button_4, "4");
-        keyValues.put(R.id.button_5, "5");
-        keyValues.put(R.id.button_6, "6");
-        keyValues.put(R.id.button_7, "7");
-        keyValues.put(R.id.button_8, "8");
-        keyValues.put(R.id.button_9, "9");
-        keyValues.put(R.id.button_0, "0");
-        keyValues.put(R.id.button_enter, "\n");
+        keyValues.put(R.id.one, "1");
+        keyValues.put(R.id.two, "2");
+        keyValues.put(R.id.three, "3");
+        keyValues.put(R.id.four, "4");
+        keyValues.put(R.id.five, "5");
+        keyValues.put(R.id.six, "6");
+        keyValues.put(R.id.seven, "7");
+        keyValues.put(R.id.eight, "8");
+        keyValues.put(R.id.nine, "9");
+        keyValues.put(R.id.zero, "0");
     }
 
     @Override
