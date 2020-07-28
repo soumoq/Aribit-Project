@@ -53,16 +53,35 @@
 
     <EditText
         android:id="@+id/phone"
+        android:layout_toRightOf="@+id/country_flag"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/for_verification"
-        android:layout_marginLeft="95px"
-        android:layout_marginTop="120px"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="155px"
+        android:background="@null"
         android:layout_marginRight="20dp"
-        android:drawableLeft="@drawable/india"
-        android:hint=" Enter your Phone Number"
-        android:inputType="number"
-        android:paddingLeft="35dp" />
+        android:hint="Enter your Phone Number"
+        android:inputType="number" />
+
+    <View android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#D6DBDF"
+        android:layout_below="@+id/for_verification"
+        android:layout_marginLeft="95px"
+        android:layout_marginRight="95px"
+        android:layout_marginTop="227px"/>
+
+    <ImageView
+        android:id="@+id/country_flag"
+        android:layout_width="51px"
+        android:layout_height="38px"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/india"
+        android:layout_toRightOf="@+id/country_code"
+        android:layout_marginTop="175px"
+        android:layout_below="@+id/for_verification"/>
+
 
     <EditText
         android:id="@+id/country_code"

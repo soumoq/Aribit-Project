@@ -3,150 +3,154 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="#EAECEE"
     android:layout_height="match_parent"
+    android:background="#EAECEE"
     tools:context=".HomeActivity">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#029688">
+
             <TextView
                 android:id="@+id/dash_board"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="DashBoard"
-                android:textSize="25dp"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
-                android:textStyle="bold"
-                android:textColor="#FFFFFF"/>
+                android:text="DashBoard"
+                android:textColor="#FFFFFF"
+                android:textSize="25dp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/assigned_order"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/dash_board"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
                 android:text="Assigned order"
                 android:textColor="#FFFFFF"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="10dp"
-                android:layout_below="@+id/dash_board"
-                android:textSize="17dp"/>
+                android:textSize="17dp" />
 
             <ImageView
                 android:id="@+id/box1"
                 android:layout_width="100dp"
                 android:layout_height="80dp"
-                android:layout_marginLeft="10dp"
-                android:src="@drawable/box"
                 android:layout_below="@+id/assigned_order"
-                android:layout_marginTop="10dp"/>
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/box" />
 
             <TextView
                 android:id="@+id/under_image_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="  Total order"
-                android:textSize="12dp"
                 android:layout_below="@+id/assigned_order"
+                android:layout_marginLeft="25dp"
                 android:layout_marginTop="25dp"
-                android:layout_marginLeft="25dp" />
+                android:text="  Total order"
+                android:textSize="12dp" />
 
             <TextView
                 android:id="@+id/point1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="25"
                 android:layout_below="@+id/under_image_1"
                 android:layout_marginLeft="50dp"
-                android:textSize="18dp"
-                android:textColor="#000000"/>
+                android:text="25"
+                android:textColor="#000000"
+                android:textSize="18dp" />
 
             <ImageView
                 android:id="@+id/box2"
-                android:layout_toRightOf="@+id/box1"
-                android:layout_marginLeft="20dp"
                 android:layout_width="100dp"
                 android:layout_height="80dp"
-                android:src="@drawable/box"
                 android:layout_below="@+id/assigned_order"
-                android:layout_marginTop="10dp"/>
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/box1"
+                android:src="@drawable/box" />
 
             <TextView
                 android:id="@+id/under_image_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/assigned_order"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="25dp"
                 android:layout_toRightOf="@+id/under_image_1"
                 android:text="  Pending order"
-                android:textSize="12dp"
-                android:layout_below="@+id/assigned_order"
-                android:layout_marginTop="25dp"
-                android:layout_marginLeft="50dp" />
+                android:textSize="12dp" />
 
             <TextView
                 android:id="@+id/point2"
-                android:layout_toRightOf="@id/point1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="10"
                 android:layout_below="@+id/under_image_1"
                 android:layout_marginLeft="100dp"
-                android:textSize="18dp"
-                android:textColor="#000000"/>
+                android:layout_toRightOf="@id/point1"
+                android:text="10"
+                android:textColor="#000000"
+                android:textSize="18dp" />
 
             <ImageView
-                android:layout_toRightOf="@+id/box2"
-                android:layout_marginLeft="20dp"
                 android:layout_width="100dp"
                 android:layout_height="80dp"
-                android:src="@drawable/box"
                 android:layout_below="@+id/assigned_order"
-                android:layout_marginTop="10dp"/>
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/box2"
+                android:src="@drawable/box" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/assigned_order"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="25dp"
                 android:layout_toRightOf="@+id/under_image_2"
                 android:text="    Completed order"
-                android:layout_below="@+id/assigned_order"
-                android:layout_marginTop="25dp"
-                android:layout_marginLeft="25dp"
-                android:textSize="12dp"/>
+                android:textSize="12dp" />
 
             <TextView
                 android:id="@+id/point3"
-                android:layout_toRightOf="@id/point2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="05"
                 android:layout_below="@+id/under_image_1"
                 android:layout_marginLeft="100dp"
-                android:textSize="18dp"
-                android:textColor="#000000"/>
+                android:layout_toRightOf="@id/point2"
+                android:text="05"
+                android:textColor="#000000"
+                android:textSize="18dp" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
     <TextView
         android:id="@+id/pending_deliveries"
-        android:layout_marginLeft="10dp"
-        android:textSize="20dp"
-        android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/card_view"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
         android:text="Pending deliveries"
         android:textColor="#029688"
-        android:layout_below="@+id/card_view"/>
+        android:textSize="20dp" />
 
     <ListView
+        android:id="@+id/list_view"
         android:layout_width="match_parent"
-        android:divider="@null"
-        android:layout_marginTop="10dp"
-        android:layout_below="@+id/pending_deliveries"
         android:layout_height="match_parent"
-        android:id="@+id/list_view"/>
+        android:layout_below="@+id/pending_deliveries"
+        android:layout_marginTop="10dp"
+        android:divider="@null"
+        android:listSelector="@android:color/transparent"
+        android:scrollbars="none" />
 
 </RelativeLayout>
