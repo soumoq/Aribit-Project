@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
+import android.text.InputType;
 import android.text.TextWatcher;
 import android.view.View;
 import android.view.Window;
@@ -42,8 +43,6 @@ public class OtpActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);//will hide the title
-        getSupportActionBar().hide(); //hide the title bar
         setContentView(R.layout.activity_otp);
 
         mAuth = FirebaseAuth.getInstance();
@@ -55,16 +54,18 @@ public class OtpActivity extends AppCompatActivity {
         otpText2 = findViewById(R.id.et_otp2);
         otpText3 = findViewById(R.id.et_otp3);
         otpText4 = findViewById(R.id.et_otp4);
-        otpText5 = findViewById(R.id.et_otp5);
-        otpText6 = findViewById(R.id.et_otp6);
+        otpText1.setInputType(InputType.TYPE_NULL);
+        otpText2.setInputType(InputType.TYPE_NULL);
+        otpText3.setInputType(InputType.TYPE_NULL);
+        otpText4.setInputType(InputType.TYPE_NULL);
+
         phoneNoTextView = findViewById(R.id.phone_no_text_view);
 
         otpText1.addTextChangedListener(new GenericTextWatcher(otpText1));
         otpText2.addTextChangedListener(new GenericTextWatcher(otpText2));
         otpText3.addTextChangedListener(new GenericTextWatcher(otpText3));
         otpText4.addTextChangedListener(new GenericTextWatcher(otpText4));
-        otpText5.addTextChangedListener(new GenericTextWatcher(otpText5));
-        otpText6.addTextChangedListener(new GenericTextWatcher(otpText6));
+        phoneNo = "7477540540";
         phoneNoTextView.setText("Please enter the verification\ncode sent to " + phoneNo);
 
         backArrow.setOnClickListener(new View.OnClickListener() {
@@ -75,83 +76,9 @@ public class OtpActivity extends AppCompatActivity {
             }
         });
 
-        sendOtp("+91" + phoneNo);
-        //startActivity(new Intent(this,HomeActivity.class));
+
     }
 
-
-    private void sendOtp(String phoneNumber) {
-        PhoneAuthProvider.getInstance().verifyPhoneNumber(
-                phoneNumber,        // Phone number to verify
-                60,                 // Timeout duration
-                TimeUnit.SECONDS,   // Unit of timeout
-                this,               // Activity (for callback binding)
-                mCallbacks);        // OnVerificationStateChangedCallbacks
-    }
-
-    private PhoneAuthProvider.OnVerificationStateChangedCallbacks
-            mCallbacks = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
-
-        @Override
-        public void onCodeSent(String s, PhoneAuthProvider.ForceResendingToken forceResendingToken) {
-            super.onCodeSent(s, forceResendingToken);
-            verificationId = s;
-
-        }
-
-
-        @Override
-        public void onVerificationCompleted(PhoneAuthCredential phoneAuthCredential) {
-            String code = phoneAuthCredential.getSmsCode();
-            if (code != null) {
-                enterEditText(code);
-                Toast.makeText(OtpActivity.this, "Successful", Toast.LENGTH_LONG).show();
-                verifyCode(code);
-            }
-        }
-
-        @Override
-        public void onVerificationFailed(FirebaseException e) {
-            Toast.makeText(OtpActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
-        }
-    };
-
-    private void verifyCode(String code) {
-        PhoneAuthCredential credential = PhoneAuthProvider.getCredential(verificationId, code);
-        signInWithCredential(credential);
-    }
-
-    private void signInWithCredential(PhoneAuthCredential credential) {
-        mAuth.signInWithCredential(credential).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                if (task.isSuccessful()) {
-                    Intent intent = new Intent(OtpActivity.this, HomeActivity.class);
-                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                    startActivity(intent);
-                } else {
-                    Toast.makeText(OtpActivity.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
-                }
-            }
-        });
-    }
-
-
-    private void enterEditText(String number) {
-        try {
-            char[] num = number.toCharArray();
-
-            otpText1.setText(String.valueOf(num[0]));
-            otpText2.setText(String.valueOf(num[1]));
-            otpText3.setText(String.valueOf(num[2]));
-            otpText4.setText(String.valueOf(num[3]));
-            otpText5.setText(String.valueOf(num[4]));
-            otpText6.setText(String.valueOf(num[5]));
-
-        } catch (Exception e) {
-            Toast.makeText(this, "Error: " + e, Toast.LENGTH_LONG).show();
-        }
-    }
 
     public class GenericTextWatcher implements TextWatcher {
         private View view;
@@ -183,21 +110,10 @@ public class OtpActivity extends AppCompatActivity {
                         otpText2.requestFocus();
                     break;
                 case R.id.et_otp4:
-                    if (text.length() == 1)
-                        otpText5.requestFocus();
-                    else if (text.length() == 0)
-                        otpText3.requestFocus();
-                    break;
-
-                case R.id.et_otp5:
-                    if (text.length() == 1)
-                        otpText6.requestFocus();
-                    else if (text.length() == 0)
-                        otpText4.requestFocus();
-                    break;
-                case R.id.et_otp6:
                     if (text.length() == 0) {
-                        otpText5.requestFocus();
+                        otpText3.requestFocus();
+                    } else if (text.length() == 1) {
+                        startActivity(new Intent(OtpActivity.this, HomeActivity.class));
                     }
                     break;
             }

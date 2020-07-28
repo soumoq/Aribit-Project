@@ -11,19 +11,21 @@
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="211px"
         android:scaleType="fitXY"
-        android:src="@drawable/logo" />
+        android:src="@drawable/logo"
+        tools:ignore="PxUsage" />
 
     <ImageView
         android:id="@+id/line"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
+        android:layout_width="6px"
+        android:layout_height="104px"
         android:layout_below="@+id/app_name"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginLeft="95px"
+        android:layout_marginTop="125px"
         android:scaleType="fitXY"
-        android:src="@drawable/line" />
+        android:src="@drawable/line"
+        tools:ignore="PxUsage" />
 
     <TextView
         android:id="@+id/signin_text"
@@ -31,11 +33,11 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/app_name"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="105px"
         android:layout_toRightOf="@+id/line"
         android:text="Sign in to\nyour account"
-        android:textColor="#148F77"
-        android:textSize="25dp"
+        android:textColor="#029688"
+        android:textSize="54px"
         android:textStyle="bold" />
 
     <TextView
@@ -43,47 +45,48 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/signin_text"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="10dp"
-        android:text="for verification a passcode will\nbe send on the number" />
+        android:layout_marginLeft="95px"
+        android:layout_marginTop="34px"
+        android:text="for verification a passcode will\nbe send on the number"
+        android:textSize="43px" />
+
 
     <EditText
         android:id="@+id/phone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/for_verification"
-        android:layout_marginLeft="48dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginLeft="95px"
+        android:layout_marginTop="120px"
         android:layout_marginRight="20dp"
         android:drawableLeft="@drawable/india"
         android:hint=" Enter your Phone Number"
         android:inputType="number"
-        android:paddingLeft="35dp"
-        android:scaleType="fitXY" />
+        android:paddingLeft="35dp" />
 
-    <TextView
+    <EditText
         android:id="@+id/country_code"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/for_verification"
-        android:layout_marginLeft="48dp"
-        android:layout_marginTop="32dp"
-        android:text="+91"
-        android:textColor="#000000"
-        android:textSize="17dp" />
+        android:layout_below="@id/for_verification"
+        android:layout_marginLeft="95px"
+        android:layout_marginTop="155px"
+        android:background="@android:color/transparent"
+        android:text="+91" />
 
     <Button
         android:id="@+id/login"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/country_code"
+        android:layout_width="935px"
+        android:layout_height="105px"
+        android:layout_below="@+id/phone"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="173px"
         android:layout_marginRight="30dp"
         android:background="@drawable/agree_and_continue"
         android:text="Agree &amp; Continue"
         android:textAllCaps="false"
-        android:textColor="#FFFFFF"
-        android:textSize="17dp" />
+        android:textColor="#ffffff"
+        android:textSize="44px"
+        tools:ignore="PxUsage" />
 
 </RelativeLayout>

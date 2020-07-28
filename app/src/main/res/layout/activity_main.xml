@@ -19,17 +19,17 @@
         android:layout_height="402dp"
         android:layout_alignParentBottom="true"
         android:scaleType="fitXY"
-        android:src="@drawable/background"
-        android:layout_marginBottom="20dp"/>
+        android:src="@drawable/background" />
 
     <ImageView
         android:id="@+id/truck_image"
-        android:layout_width="147dp"
-        android:layout_height="140dp"
+        android:layout_width="499px"
+        android:layout_height="338px"
         android:src="@drawable/truck"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginBottom="25px"
+        tools:ignore="PxUsage" />
 
 
 </RelativeLayout>

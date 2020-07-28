@@ -83,26 +83,27 @@
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/otp_card_view"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="261px"
         android:layout_below="@+id/vibration_img"
-        android:layout_marginLeft="30dp"
+        android:layout_marginLeft="49px"
         android:layout_marginTop="30dp"
-        android:layout_marginRight="29dp"
-        app:cardCornerRadius="5dp"
-        app:strokeColor="#148F77"
-        app:strokeWidth="@dimen/cardview_compat_inset_shadow">
+        android:layout_marginRight="49px"
+        app:cardCornerRadius="20px"
+        app:strokeColor="#029688"
+        app:strokeWidth="@dimen/cardview_compat_inset_shadow"
+        tools:ignore="PxUsage">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <EditText
                 android:id="@+id/et_otp1"
-                android:layout_width="40dp"
-                android:layout_height="50dp"
-                android:layout_centerVertical="true"
+                android:layout_width="167px"
+                android:layout_height="165px"
                 android:layout_gravity="center"
-                android:layout_marginLeft="5dp"
+                android:layout_marginStart="100px"
+                android:layout_marginLeft="100px"
                 android:background="@drawable/edit_text_box"
                 android:cursorVisible="false"
                 android:digits="1234567890"
@@ -114,12 +115,10 @@
 
             <EditText
                 android:id="@+id/et_otp2"
-                android:layout_width="40dp"
-                android:layout_height="50dp"
-                android:layout_centerVertical="true"
+                android:layout_width="167px"
+                android:layout_height="165px"
+                android:layout_marginLeft="36px"
                 android:layout_gravity="center"
-                android:layout_marginLeft="10dp"
-                android:layout_toRightOf="@+id/et_otp1"
                 android:background="@drawable/edit_text_box"
                 android:cursorVisible="false"
                 android:digits="1234567890"
@@ -131,12 +130,10 @@
 
             <EditText
                 android:id="@+id/et_otp3"
-                android:layout_width="40dp"
-                android:layout_height="50dp"
-                android:layout_centerVertical="true"
+                android:layout_width="167px"
+                android:layout_height="165px"
+                android:layout_marginLeft="36px"
                 android:layout_gravity="center"
-                android:layout_marginLeft="10dp"
-                android:layout_toRightOf="@+id/et_otp2"
                 android:background="@drawable/edit_text_box"
                 android:cursorVisible="false"
                 android:digits="1234567890"
@@ -148,12 +145,10 @@
 
             <EditText
                 android:id="@+id/et_otp4"
-                android:layout_width="40dp"
-                android:layout_height="50dp"
-                android:layout_centerVertical="true"
+                android:layout_width="167px"
+                android:layout_height="165px"
+                android:layout_marginLeft="36px"
                 android:layout_gravity="center"
-                android:layout_marginLeft="10dp"
-                android:layout_toRightOf="@+id/et_otp3"
                 android:background="@drawable/edit_text_box"
                 android:cursorVisible="false"
                 android:digits="1234567890"
@@ -163,50 +158,20 @@
                 android:textIsSelectable="false"
                 android:textSize="20sp" />
 
-            <EditText
-                android:id="@+id/et_otp5"
-                android:layout_width="40dp"
-                android:layout_height="50dp"
-                android:layout_centerVertical="true"
-                android:layout_gravity="center"
-                android:layout_marginLeft="10dp"
-                android:layout_toRightOf="@+id/et_otp4"
-                android:background="@drawable/edit_text_box"
-                android:cursorVisible="false"
-                android:digits="1234567890"
-                android:gravity="center"
-                android:inputType="number"
-                android:maxLength="4"
-                android:textIsSelectable="false"
-                android:textSize="20sp" />
 
-            <EditText
-                android:id="@+id/et_otp6"
-                android:layout_width="40dp"
-                android:layout_height="50dp"
-                android:layout_centerVertical="true"
-                android:layout_gravity="center"
-                android:layout_marginLeft="10dp"
-                android:layout_toRightOf="@+id/et_otp5"
-                android:background="@drawable/edit_text_box"
-                android:cursorVisible="false"
-                android:digits="1234567890"
-                android:gravity="center"
-                android:inputType="number"
-                android:maxLength="4"
-                android:textIsSelectable="false"
-                android:textSize="20sp" />
-
-        </RelativeLayout>
+        </LinearLayout>
 
     </com.google.android.material.card.MaterialCardView>
 
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/otp_card_view"
-        android:layout_marginTop="60dp">
+        android:layout_height="554px"
+        android:layout_marginLeft="49px"
+        android:layout_marginRight="49px"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="69px"
+        tools:ignore="PxUsage">
 
         <TextView
             android:id="@+id/one"
@@ -215,7 +180,7 @@
             android:layout_marginLeft="50dp"
             android:text="1"
             android:textColor="#000000"
-            android:textSize="35dp" />
+            android:textSize="69px" />
 
         <TextView
             android:id="@+id/two"
@@ -224,7 +189,7 @@
             android:layout_centerHorizontal="true"
             android:text="2"
             android:textColor="#000000"
-            android:textSize="35dp" />
+            android:textSize="69px" />
 
         <TextView
             android:id="@+id/three"
@@ -234,7 +199,7 @@
             android:layout_marginRight="50dp"
             android:text="3"
             android:textColor="#000000"
-            android:textSize="35dp" />
+            android:textSize="69px" />
 
         <TextView
             android:id="@+id/four"
@@ -245,7 +210,7 @@
             android:layout_marginTop="20dp"
             android:text="4"
             android:textColor="#000000"
-            android:textSize="35dp" />
+            android:textSize="69px" />
 
         <TextView
             android:id="@+id/five"
@@ -256,7 +221,7 @@
             android:layout_marginTop="20dp"
             android:text="5"
             android:textColor="#000000"
-            android:textSize="35dp" />
+            android:textSize="69px" />
 
         <TextView
             android:id="@+id/six"
@@ -268,7 +233,7 @@
             android:layout_marginRight="50dp"
             android:text="6"
             android:textColor="#000000"
-            android:textSize="35dp" />
+            android:textSize="69px" />
         <TextView
             android:id="@+id/seven1"
             android:layout_width="wrap_content"
@@ -278,7 +243,7 @@
             android:layout_marginTop="20dp"
             android:text="7"
             android:textColor="#000000"
-            android:textSize="35dp" />
+            android:textSize="69px" />
 
         <TextView
             android:id="@+id/seven"
@@ -289,7 +254,7 @@
             android:layout_marginTop="20dp"
             android:text="8"
             android:textColor="#000000"
-            android:textSize="35dp" />
+            android:textSize="69px" />
 
         <TextView
             android:id="@+id/siz"
@@ -301,11 +266,11 @@
             android:layout_marginRight="50dp"
             android:text="9"
             android:textColor="#000000"
-            android:textSize="35dp" />
+            android:textSize="69px" />
 
         <ImageView
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_width="69px"
+            android:layout_height="50px"
             android:src="@drawable/back_space"
             android:layout_marginLeft="50dp"
             android:layout_marginTop="20dp"
@@ -320,7 +285,7 @@
             android:layout_marginTop="20dp"
             android:text="0"
             android:textColor="#000000"
-            android:textSize="35dp" />
+            android:textSize="69px" />
 
     </RelativeLayout>
 
