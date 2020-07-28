@@ -10,6 +10,8 @@ import android.text.InputType;
 import android.text.TextWatcher;
 import android.view.View;
 import android.view.Window;
+import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputConnection;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -38,6 +40,8 @@ public class OtpActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private String verificationId;
     private ImageView backArrow;
+    private String phoneNo;
+    private MyKeyboard keyboard;
 
 
     @Override
@@ -45,19 +49,15 @@ public class OtpActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_otp);
 
-        mAuth = FirebaseAuth.getInstance();
-        Intent intent = getIntent();
-        String phoneNo = intent.getStringExtra("phone");
 
+        keyboard = (MyKeyboard) findViewById(R.id.keyboard);
         backArrow = findViewById(R.id.back_arrow);
         otpText1 = findViewById(R.id.et_otp1);
         otpText2 = findViewById(R.id.et_otp2);
         otpText3 = findViewById(R.id.et_otp3);
         otpText4 = findViewById(R.id.et_otp4);
-        otpText1.setInputType(InputType.TYPE_NULL);
-        otpText2.setInputType(InputType.TYPE_NULL);
-        otpText3.setInputType(InputType.TYPE_NULL);
-        otpText4.setInputType(InputType.TYPE_NULL);
+        inputKey(otpText1);
+
 
         phoneNoTextView = findViewById(R.id.phone_no_text_view);
 
@@ -79,6 +79,13 @@ public class OtpActivity extends AppCompatActivity {
 
     }
 
+    private void inputKey(EditText otpText) {
+        otpText.setRawInputType(InputType.TYPE_CLASS_TEXT);
+        otpText.setTextIsSelectable(true);
+        InputConnection ic = otpText.onCreateInputConnection(new EditorInfo());
+        keyboard.setInputConnection(ic);
+    }
+
 
     public class GenericTextWatcher implements TextWatcher {
         private View view;
@@ -94,24 +101,33 @@ public class OtpActivity extends AppCompatActivity {
             switch (view.getId()) {
 
                 case R.id.et_otp1:
-                    if (text.length() == 1)
+                    if (text.length() == 1) {
                         otpText2.requestFocus();
+                        inputKey(otpText2);
+                    }
                     break;
                 case R.id.et_otp2:
-                    if (text.length() == 1)
+                    if (text.length() == 1) {
                         otpText3.requestFocus();
-                    else if (text.length() == 0)
+                        inputKey(otpText3);
+                    } else if (text.length() == 0) {
                         otpText1.requestFocus();
+                        inputKey(otpText1);
+                    }
                     break;
                 case R.id.et_otp3:
-                    if (text.length() == 1)
+                    if (text.length() == 1) {
                         otpText4.requestFocus();
-                    else if (text.length() == 0)
+                        inputKey(otpText4);
+                    } else if (text.length() == 0) {
                         otpText2.requestFocus();
+                        inputKey(otpText2);
+                    }
                     break;
                 case R.id.et_otp4:
                     if (text.length() == 0) {
                         otpText3.requestFocus();
+                        inputKey(otpText3);
                     } else if (text.length() == 1) {
                         startActivity(new Intent(OtpActivity.this, HomeActivity.class));
                     }
