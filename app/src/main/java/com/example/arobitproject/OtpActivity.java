@@ -56,6 +56,12 @@ public class OtpActivity extends AppCompatActivity {
         otpText2 = findViewById(R.id.et_otp2);
         otpText3 = findViewById(R.id.et_otp3);
         otpText4 = findViewById(R.id.et_otp4);
+        otpText1.setInputType(InputType.TYPE_NULL);
+        otpText2.setInputType(InputType.TYPE_NULL);
+        otpText3.setInputType(InputType.TYPE_NULL);
+        otpText4.setInputType(InputType.TYPE_NULL);
+
+
         inputKey(otpText1);
 
 
@@ -130,6 +136,8 @@ public class OtpActivity extends AppCompatActivity {
                         inputKey(otpText3);
                     } else if (text.length() == 1) {
                         startActivity(new Intent(OtpActivity.this, HomeActivity.class));
+                        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                        finish();
                     }
                     break;
             }
@@ -144,5 +152,11 @@ public class OtpActivity extends AppCompatActivity {
         public void onTextChanged(CharSequence arg0, int arg1, int arg2, int arg3) {
             // TODO Auto-generated method stub
         }
+    }
+
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.silde_in_left, R.anim.slide_out_right);
     }
 }

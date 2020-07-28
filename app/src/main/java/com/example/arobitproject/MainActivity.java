@@ -23,10 +23,11 @@ public class MainActivity extends AppCompatActivity {
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    startActivity(new Intent(MainActivity.this,SigningInActivity.class));
+                    startActivity(new Intent(MainActivity.this, SigningInActivity.class));
+                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                     finish();
                 }
-            },TIME_OUT);
+            }, TIME_OUT);
         } catch (Exception e) {
             Toast.makeText(this, "Error: " + e, Toast.LENGTH_LONG).show();
         }
