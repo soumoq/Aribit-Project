@@ -21,8 +21,6 @@ public class SigningInActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);//will hide the title
-        getSupportActionBar().hide(); //hide the title bar
         setContentView(R.layout.activity_signin);
 
         phone = findViewById(R.id.phone);
@@ -30,15 +28,7 @@ public class SigningInActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String phoneNo=phone.getText().toString();
-                if(phoneNo.length()==10) {
-                    Intent intent = new Intent(SigningInActivity.this, OtpActivity.class);
-                    intent.putExtra("phone", phoneNo);
-                    startActivity(intent);
-                    finish();
-                }else {
-                    Toast.makeText(SigningInActivity.this,"Please enter correct phone number",Toast.LENGTH_LONG).show();
-                }
+                startActivity(new Intent(SigningInActivity.this,OtpActivity.class));
             }
         });
     }
