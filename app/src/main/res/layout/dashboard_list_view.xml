@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/up_card_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
+        app:cardCornerRadius="5dp"
         android:layout_marginRight="10dp"
         android:layout_marginBottom="30dp">
 
@@ -25,9 +27,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
-                android:text="Ujjwal Maity"
+                android:text="Indroneel Mondol"
                 android:textColor="#000000"
-                android:textSize="20dp"
+                android:textSize="15sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -35,7 +37,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="15dp"
                 android:layout_marginRight="10dp"
                 android:text="Pick up pending"
                 android:textColor="#029688"
@@ -44,7 +46,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="15dp"
                 android:layout_toLeftOf="@+id/pick_up"
                 android:text="Status : "
                 android:textSize="12dp" />
@@ -66,7 +68,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_toRightOf="@+id/call_image"
                 android:text="Call to a customer"
-                android:textColor="#41C651 "
+                android:textColor="#00cc13"
                 android:textSize="12dp" />
 
             <TextView

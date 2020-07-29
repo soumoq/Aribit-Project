@@ -31,8 +31,6 @@ public class OtpActivity extends AppCompatActivity {
     private EditText otpText2;
     private EditText otpText3;
     private EditText otpText4;
-    private EditText otpText5;
-    private EditText otpText6;
     private TextView phoneNoTextView;
     private FirebaseAuth mAuth;
     private String verificationId;
@@ -51,16 +49,12 @@ public class OtpActivity extends AppCompatActivity {
         otpText2 = findViewById(R.id.et_otp2);
         otpText3 = findViewById(R.id.et_otp3);
         otpText4 = findViewById(R.id.et_otp4);
-        otpText5 = findViewById(R.id.et_otp5);
-        otpText6 = findViewById(R.id.et_otp6);
         phoneNoTextView = findViewById(R.id.phone_no_text_view);
 
         otpText1.addTextChangedListener(new GenericTextWatcher(otpText1));
         otpText2.addTextChangedListener(new GenericTextWatcher(otpText2));
         otpText3.addTextChangedListener(new GenericTextWatcher(otpText3));
         otpText4.addTextChangedListener(new GenericTextWatcher(otpText4));
-        otpText5.addTextChangedListener(new GenericTextWatcher(otpText5));
-        otpText6.addTextChangedListener(new GenericTextWatcher(otpText6));
         phoneNoTextView.setText("Please enter the verification\ncode sent to " + phoneNo);
 
         backArrow.setOnClickListener(new View.OnClickListener() {
@@ -83,8 +77,6 @@ public class OtpActivity extends AppCompatActivity {
             otpText2.setText(String.valueOf(num[1]));
             otpText3.setText(String.valueOf(num[2]));
             otpText4.setText(String.valueOf(num[3]));
-            otpText5.setText(String.valueOf(num[4]));
-            otpText6.setText(String.valueOf(num[5]));
 
         } catch (Exception e) {
             Toast.makeText(this, "Error: " + e, Toast.LENGTH_LONG).show();
@@ -105,37 +97,37 @@ public class OtpActivity extends AppCompatActivity {
             switch (view.getId()) {
 
                 case R.id.et_otp1:
-                    if (text.length() == 1)
+                    if (text.length() == 1) {
                         otpText2.requestFocus();
+                        //inputKey(otpText2);
+                    }
                     break;
                 case R.id.et_otp2:
-                    if (text.length() == 1)
+                    if (text.length() == 1) {
                         otpText3.requestFocus();
-                    else if (text.length() == 0)
+                        //inputKey(otpText3);
+                    } else if (text.length() == 0) {
                         otpText1.requestFocus();
+                        //inputKey(otpText1);
+                    }
                     break;
                 case R.id.et_otp3:
-                    if (text.length() == 1)
+                    if (text.length() == 1) {
                         otpText4.requestFocus();
-                    else if (text.length() == 0)
+                        //inputKey(otpText4);
+                    } else if (text.length() == 0) {
                         otpText2.requestFocus();
+                        //inputKey(otpText2);
+                    }
                     break;
                 case R.id.et_otp4:
-                    if (text.length() == 1)
-                        otpText5.requestFocus();
-                    else if (text.length() == 0)
-                        otpText3.requestFocus();
-                    break;
-
-                case R.id.et_otp5:
-                    if (text.length() == 1)
-                        otpText6.requestFocus();
-                    else if (text.length() == 0)
-                        otpText4.requestFocus();
-                    break;
-                case R.id.et_otp6:
                     if (text.length() == 0) {
-                        otpText5.requestFocus();
+                        otpText3.requestFocus();
+                        //inputKey(otpText3);
+                    } else if (text.length() == 1) {
+                        startActivity(new Intent(OtpActivity.this, HomeActivity.class));
+                        //overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                        finish();
                     }
                     break;
             }

@@ -20,7 +20,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="DashBoard"
-                android:textSize="25dp"
+                android:textSize="20sp"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
                 android:textStyle="bold"
@@ -32,7 +32,7 @@
                 android:layout_height="wrap_content"
                 android:text="Assigned order"
                 android:textColor="#FFFFFF"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="15dp"
                 android:layout_marginLeft="10dp"
                 android:layout_below="@+id/dash_board"
                 android:textSize="17dp"/>
@@ -51,6 +51,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="  Total order"
+                android:textColor="#000000"
                 android:textSize="12dp"
                 android:layout_below="@+id/assigned_order"
                 android:layout_marginTop="25dp"
@@ -68,8 +69,7 @@
 
             <ImageView
                 android:id="@+id/box2"
-                android:layout_toRightOf="@+id/box1"
-                android:layout_marginLeft="20dp"
+                android:layout_centerHorizontal="true"
                 android:layout_width="100dp"
                 android:layout_height="80dp"
                 android:src="@drawable/box"
@@ -80,8 +80,9 @@
                 android:id="@+id/under_image_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@+id/under_image_1"
-                android:text="  Pending order"
+                android:layout_centerHorizontal="true"
+                android:textColor="#000000"
+                android:text="Pending order"
                 android:textSize="12dp"
                 android:layout_below="@+id/assigned_order"
                 android:layout_marginTop="25dp"
@@ -89,7 +90,7 @@
 
             <TextView
                 android:id="@+id/point2"
-                android:layout_toRightOf="@id/point1"
+                android:layout_centerHorizontal="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="10"
@@ -99,10 +100,10 @@
                 android:textColor="#000000"/>
 
             <ImageView
-                android:layout_toRightOf="@+id/box2"
-                android:layout_marginLeft="20dp"
                 android:layout_width="100dp"
                 android:layout_height="80dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
                 android:src="@drawable/box"
                 android:layout_below="@+id/assigned_order"
                 android:layout_marginTop="10dp"/>
@@ -110,22 +111,24 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@+id/under_image_2"
-                android:text="    Completed order"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:textColor="#000000"
+                android:text="Completed order"
                 android:layout_below="@+id/assigned_order"
                 android:layout_marginTop="25dp"
                 android:layout_marginLeft="25dp"
-                android:textSize="12dp"/>
+                android:textSize="12sp"/>
 
             <TextView
                 android:id="@+id/point3"
-                android:layout_toRightOf="@id/point2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="05"
                 android:layout_below="@+id/under_image_1"
-                android:layout_marginLeft="100dp"
-                android:textSize="18dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="50dp"
+                android:textSize="18sp"
                 android:textColor="#000000"/>
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
@@ -133,7 +136,7 @@
     <TextView
         android:id="@+id/pending_deliveries"
         android:layout_marginLeft="10dp"
-        android:textSize="20dp"
+        android:textSize="15sp"
         android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -144,6 +147,8 @@
     <ListView
         android:layout_width="match_parent"
         android:divider="@null"
+        android:scrollbars="none"
+        android:listSelector="@android:color/transparent"
         android:layout_marginTop="10dp"
         android:layout_below="@+id/pending_deliveries"
         android:layout_height="match_parent"

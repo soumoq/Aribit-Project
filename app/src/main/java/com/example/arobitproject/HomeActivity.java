@@ -15,7 +15,7 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        String name[]={"Ujjwal maity","Indroneel Mondol","Indroneel Mondol"};
+        String name[]={"Indroneel Mondol","Indroneel Mondol","Indroneel Mondol"};
         listView = findViewById(R.id.list_view);
         DashBordListView adopter = new DashBordListView(this,name);
         listView.setAdapter(adopter);

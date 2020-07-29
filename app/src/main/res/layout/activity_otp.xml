@@ -83,119 +83,95 @@
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/otp_card_view"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="80dp"
         android:layout_below="@+id/vibration_img"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="30dp"
         android:layout_marginRight="29dp"
         app:cardCornerRadius="5dp"
-        app:strokeColor="#148F77"
-        app:strokeWidth="@dimen/cardview_compat_inset_shadow">
+        app:strokeColor="#029688"
+        app:strokeWidth="@dimen/cardview_compat_inset_shadow"
+        tools:ignore="PxUsage">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:weightSum="4.0">
 
             <EditText
                 android:id="@+id/et_otp1"
-                android:layout_width="40dp"
-                android:layout_height="50dp"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginLeft="20dp"
                 android:layout_centerVertical="true"
                 android:layout_gravity="center"
-                android:layout_marginLeft="5dp"
                 android:background="@drawable/edit_text_box"
                 android:cursorVisible="false"
                 android:digits="1234567890"
                 android:gravity="center"
                 android:inputType="number"
-                android:maxLength="4"
+                android:maxLength="1"
                 android:textIsSelectable="false"
                 android:textSize="20sp" />
 
-            <EditText
-                android:id="@+id/et_otp2"
-                android:layout_width="40dp"
-                android:layout_height="50dp"
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_gravity="center"
                 android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:layout_toRightOf="@+id/et_otp1"
-                android:background="@drawable/edit_text_box"
-                android:cursorVisible="false"
-                android:digits="1234567890"
-                android:gravity="center"
-                android:inputType="number"
-                android:maxLength="4"
-                android:textIsSelectable="false"
-                android:textSize="20sp" />
+                android:layout_toLeftOf="@+id/et_otp4">
+                <EditText
+                    android:id="@+id/et_otp2"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
 
-            <EditText
-                android:id="@+id/et_otp3"
-                android:layout_width="40dp"
-                android:layout_height="50dp"
-                android:layout_centerVertical="true"
-                android:layout_gravity="center"
-                android:layout_marginLeft="10dp"
-                android:layout_toRightOf="@+id/et_otp2"
-                android:background="@drawable/edit_text_box"
-                android:cursorVisible="false"
-                android:digits="1234567890"
-                android:gravity="center"
-                android:inputType="number"
-                android:maxLength="4"
-                android:textIsSelectable="false"
-                android:textSize="20sp" />
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/edit_text_box"
+                    android:cursorVisible="false"
+                    android:digits="1234567890"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:textIsSelectable="false"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/et_otp3"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/edit_text_box"
+                    android:cursorVisible="false"
+                    android:gravity="center"
+                    android:digits="1234567890"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:textIsSelectable="false"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+
 
             <EditText
                 android:id="@+id/et_otp4"
-                android:layout_width="40dp"
-                android:layout_height="50dp"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
                 android:layout_centerVertical="true"
                 android:layout_gravity="center"
-                android:layout_marginLeft="10dp"
-                android:layout_toRightOf="@+id/et_otp3"
                 android:background="@drawable/edit_text_box"
                 android:cursorVisible="false"
                 android:digits="1234567890"
                 android:gravity="center"
                 android:inputType="number"
-                android:maxLength="4"
+                android:maxLength="1"
                 android:textIsSelectable="false"
                 android:textSize="20sp" />
 
-            <EditText
-                android:id="@+id/et_otp5"
-                android:layout_width="40dp"
-                android:layout_height="50dp"
-                android:layout_centerVertical="true"
-                android:layout_gravity="center"
-                android:layout_marginLeft="10dp"
-                android:layout_toRightOf="@+id/et_otp4"
-                android:background="@drawable/edit_text_box"
-                android:cursorVisible="false"
-                android:digits="1234567890"
-                android:gravity="center"
-                android:inputType="number"
-                android:maxLength="4"
-                android:textIsSelectable="false"
-                android:textSize="20sp" />
-
-            <EditText
-                android:id="@+id/et_otp6"
-                android:layout_width="40dp"
-                android:layout_height="50dp"
-                android:layout_centerVertical="true"
-                android:layout_gravity="center"
-                android:layout_marginLeft="10dp"
-                android:layout_toRightOf="@+id/et_otp5"
-                android:background="@drawable/edit_text_box"
-                android:cursorVisible="false"
-                android:digits="1234567890"
-                android:gravity="center"
-                android:inputType="number"
-                android:maxLength="4"
-                android:textIsSelectable="false"
-                android:textSize="20sp" />
 
         </RelativeLayout>
 

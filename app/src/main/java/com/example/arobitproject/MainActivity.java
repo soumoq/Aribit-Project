@@ -4,26 +4,28 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.view.Window;
 import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
-    ImageView truckImage;
+    private static int SPLASH_SCREEN_TIME_OUT = 1000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        truckImage = findViewById(R.id.truck_image);
-        truckImage.setOnClickListener(new View.OnClickListener() {
+        new Handler().postDelayed(new Runnable() {
             @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this,SigningInActivity.class));
+            public void run() {
+                startActivity(new Intent(MainActivity.this, SigningInActivity.class));
+                finish();
+                //the current activity will get finished.
             }
-        });
+        }, SPLASH_SCREEN_TIME_OUT);
 
 
     }

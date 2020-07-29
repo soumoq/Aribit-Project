@@ -17,13 +17,14 @@
 
     <ImageView
         android:id="@+id/line"
-        android:layout_width="5dp"
-        android:layout_height="50dp"
+        android:layout_width="3dp"
+        android:layout_height="40dp"
         android:layout_below="@+id/app_name"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="60dp"
         android:scaleType="fitXY"
-        android:src="@drawable/line" />
+        android:src="@drawable/line"
+        android:layout_marginStart="50dp" />
 
     <TextView
         android:id="@+id/signin_text"
@@ -34,56 +35,82 @@
         android:layout_marginTop="52dp"
         android:layout_toRightOf="@+id/line"
         android:text="Sign in to\nyour account"
-        android:textColor="#148F77"
-        android:textSize="25dp"
+        android:textColor="#029688"
+        android:textSize="20sp"
         android:textStyle="bold" />
 
     <TextView
         android:id="@+id/for_verification"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="17sp"
         android:layout_below="@+id/signin_text"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="10dp"
-        android:text="for verification a passcode will\nbe send on the number" />
+        android:text="for verification a passcode will\nbe send on the number"
+        android:layout_marginStart="50dp" />
 
     <EditText
         android:id="@+id/phone"
+        android:layout_toRightOf="@+id/country_flag"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/for_verification"
-        android:layout_marginLeft="48dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="52dp"
+        android:background="@null"
         android:layout_marginRight="20dp"
-        android:drawableLeft="@drawable/india"
-        android:hint=" Enter your Phone Number"
+        android:hint="Enter your Phone Number"
         android:inputType="number"
-        android:paddingLeft="35dp"
-        android:scaleType="fitXY" />
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@+id/country_flag" />
 
-    <TextView
+    <View
+        android:id="@+id/edit_text_line"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#D6DBDF"
+        android:layout_below="@+id/country_code"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="30dp" />
+
+    <ImageView
+        android:id="@+id/country_flag"
+        android:layout_width="25dp"
+        android:layout_height="17dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/india"
+        android:layout_toRightOf="@+id/country_code"
+        android:layout_below="@+id/for_verification"/>
+
+
+    <EditText
         android:id="@+id/country_code"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/for_verification"
+        android:layout_below="@id/for_verification"
         android:layout_marginLeft="48dp"
-        android:layout_marginTop="32dp"
-        android:text="+91"
-        android:textColor="#000000"
-        android:textSize="17dp" />
+        android:layout_marginTop="52dp"
+        android:background="@android:color/transparent"
+        android:text="+91" />
 
     <Button
         android:id="@+id/login"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/country_code"
+        android:layout_height="40dp"
+        android:layout_below="@+id/edit_text_line"
         android:layout_marginLeft="40dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="70dp"
         android:layout_marginRight="30dp"
         android:background="@drawable/agree_and_continue"
         android:text="Agree &amp; Continue"
         android:textAllCaps="false"
+        android:gravity="center"
         android:textColor="#FFFFFF"
-        android:textSize="17dp" />
+        android:textSize="17dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="30dp" />
 
 </RelativeLayout>
