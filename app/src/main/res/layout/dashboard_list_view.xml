@@ -132,7 +132,7 @@
                     android:layout_below="@+id/line_up"
                     android:layout_marginLeft="20dp"
                     android:layout_toRightOf="@+id/order_id_list"
-                    android:background="#EAECEE" />
+                    android:background="#EAECEE"/>
 
                 <TextView
                     android:id="@+id/order_amount"
